@@ -29,7 +29,7 @@ export default function Search({getCity,getCurrentLocation}) {
         let arrSuggestions = cities.filter((suggestion) =>
             suggestion.toLowerCase().includes(input.toLowerCase())
         );
-        if (input != "") {
+        if (input !== "") {
             setSuggestions(arrSuggestions);
         }
     }
