@@ -1,4 +1,4 @@
-export default [] = [
+const data = [
     // Egypt
     { Cairo: { latitude: 30.04442, longitude: 31.235712 } },
     { Alexandria: { latitude: 31.200092, longitude: 29.918739 } },
@@ -327,3 +327,4 @@ export default [] = [
     { "Al Dhale'e": { latitude: 13.4723, longitude: 44.418 } },
     { "Al-Mahrah": { latitude: 16.9747, longitude: 49.385 } },
 ];
+export default data

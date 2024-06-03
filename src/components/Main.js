@@ -37,10 +37,13 @@ export default function Main() {
         setCity(city);
         setName(false)
         data.map((el) => {
-            el[`${city}`] && setLocation(el[`${city}`]);
+            if (el[`${city}`]) {
+                setLocation(el[`${city}`]);
+            }
+            return el;
         });
     }
-    if (lang == "en") {
+    if (lang === "en") {
         moment.locale("en");
     } else {
         moment.locale("ar");
@@ -86,7 +89,7 @@ export default function Main() {
     }, [location]);
     return (
         <>
-            <div className={lang == "en" ? "container en" : "container ar"}>
+            <div className={lang === "en" ? "container en" : "container ar"}>
                 <div
                     className="card"
                     style={{
@@ -96,7 +99,7 @@ export default function Main() {
                     <div className="toggle">
                         <div
                             className={`toggle-content ${
-                                lang == "ar" ? "right" : "left"
+                                lang === "ar" ? "right" : "left"
                             }`}
                         >
                             <div className="toggle-content-container">
@@ -119,6 +122,7 @@ export default function Main() {
                                     <div className="cloud">
                                         <img
                                             src={`https://openweathermap.org/img/wn/${temp.icon}@2x.png`}
+                                            alt="img"
                                         />
                                         <p>{t(temp.mian)}</p>
                                     </div>
@@ -127,7 +131,7 @@ export default function Main() {
                         </div>
                         <div
                             className={`toggle-details ${
-                                lang == "ar" ? "left" : "right"
+                                lang === "ar" ? "left" : "right"
                             }`}
                         >
                             <div className="toggle-details-container">
