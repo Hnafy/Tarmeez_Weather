@@ -1,13 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --text: #a7a5a5;
+  --sub: #edecec;
+  --background: #061418;
+  --primary: #9BABAB;
+  --secondary: #5264ae;
+  --accent: #777;
+  --border: #757575;
+  --important: #eee;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face{
+  font-family: Roboto;
+  src: url("./../public/fonts/Roboto/Roboto-Bold.ttf"); 
+  font-weight: 900;
+}
+@font-face{
+  font-family: Roboto;
+  src: url("./../public/fonts/Roboto/Roboto-Light.ttf"); 
+  font-weight: 300;
+}
+@font-face{
+  font-family: Roboto;
+  src: url("./../public/fonts/Roboto/Roboto-Regular.ttf"); 
+  font-weight: 400;
+}
+@font-face{
+  font-family: Cairo;
+  src: url("./../public/fonts/Cairo/Cairo-Bold.ttf"); 
+  font-weight: 900;
+}
+@font-face{
+  font-family: Cairo;
+  src: url("./../public/fonts/Cairo/Cairo-Light.ttf"); 
+  font-weight: 300;
+}
+@font-face{
+  font-family: Cairo;
+  src: url("./../public/fonts/Cairo/Cairo-Regular.ttf"); 
+  font-weight: 400;
 }
