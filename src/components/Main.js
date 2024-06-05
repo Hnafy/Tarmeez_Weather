@@ -27,7 +27,7 @@ export default function Main() {
     });
     const [name, setName] = useState(false);
     let date = moment().format("h:mm - dddd, D MMMM YY");
-    const { t,i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
     // Handles
     function getCurrentLocation(obj) {
         setLocation(obj);
@@ -35,7 +35,7 @@ export default function Main() {
     }
     function getCity(city) {
         setCity(city);
-        setName(false)
+        setName(false);
         data.map((el) => {
             if (el[`${city}`]) {
                 setLocation(el[`${city}`]);
@@ -107,7 +107,8 @@ export default function Main() {
                                     className="lang"
                                     defaultValue="en"
                                     onChange={(e) => {
-                                        setLang(e.target.value);i18n.changeLanguage(e.target.value);
+                                        setLang(e.target.value);
+                                        i18n.changeLanguage(e.target.value);
                                     }}
                                 >
                                     <option value="en">English</option>
