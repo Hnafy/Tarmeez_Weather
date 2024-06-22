@@ -49,7 +49,8 @@ export default function Main() {
         moment.locale("ar");
     }
     useEffect(() => {
-        let key = "47e8589bd0e8951da8010c248353ed0b";
+        const API_KEY = process.env.REACT_APP_WEATHER_API_KEY
+        // let key = "47e8589bd0e8951da8010c248353ed0b";
         const cancelToken = axios.CancelToken;
         const source = cancelToken.source();
         const fetchData = async () => {
@@ -57,7 +58,7 @@ export default function Main() {
                 const response = await axios.get(
                     `https://api.openweathermap.org/data/2.5/weather?lat=${
                         location.latitude ?? "51.507351"
-                    }&lon=${location.longitude ?? "-0.127758"}&appid=${key}`,
+                    }&lon=${location.longitude ?? "-0.127758"}&appid=${API_KEY}`,
                     {
                         cancelToken: source.token,
                     }
